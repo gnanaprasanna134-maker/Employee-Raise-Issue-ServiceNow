@@ -1,0 +1,111 @@
+/* ===============================
+   RAISE TICKET – PREMIUM WIDGET
+   =============================== */
+
+
+.raise-ticket-widget {
+  display: block;
+  height: 100%;
+  min-height: 280px;
+  border-radius: 16px;
+  background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984');
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Floating 3D effect */
+.raise-ticket-widget:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Overlay with gradient */
+.raise-ticket-widget .overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(11, 94, 215, 0.85),
+    rgba(0, 0, 0, 0.75)
+  );
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 0.4s ease;
+}
+
+
+/* Text styles */
+.raise-ticket-widget h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+
+.raise-ticket-widget p {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+
+/* Premium button */
+.raise-ticket-widget .premium-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b5ed7;
+  background: linear-gradient(135deg, #ffffff, #e9f1ff);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+.raise-ticket-widget:hover .premium-btn {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #e9f1ff, #ffffff);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Soft glow animation */
+.raise-ticket-widget::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.18),
+    transparent 60%
+  );
+  animation: floatGlow 10s infinite linear;
+  pointer-events: none;
+}
+
+
+/* Glow motion */
+@keyframes floatGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}.
